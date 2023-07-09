@@ -11,8 +11,7 @@ def do_pack():
     time = datetime.utcnow().strftime('%Y%m%d%H%M%S')
     archive_name = 'web_static_{}.tgz'.format(time)
     try:
-        if isdir("versions") is False:
-            local("mkdir -p versions")
+        local("mkdir -p versions")
         archive_path = 'versions/{}'.format(archive_name)
         local("tar -cvzf {} web_static".format(archive_path))
         return archive_path
