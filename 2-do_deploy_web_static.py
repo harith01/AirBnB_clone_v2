@@ -2,7 +2,7 @@
 """Fabric script that distributes an archive
 to web servers"""
 
-from fabric.api import run, local, env
+from fabric.api import run, put, env
 from os.path import exists
 env.hosts = ['35.153.194.15','	3.83.238.14']
 
