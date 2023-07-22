@@ -35,10 +35,10 @@ def display_c(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def display_python(text):
+def display_python(text="is cool"):
     """Display "Python" followed by <text>"""
     text = text.replace("_", " ")
-    return "Python %s" % text
+    return "Python {}".format(text)
 
 
 if __name__ == "__main__":
